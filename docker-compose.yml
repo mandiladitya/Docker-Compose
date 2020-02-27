@@ -29,7 +29,7 @@ services:
     phpmyadmin:
         image: phpmyadmin/phpmyadmin
         links: 
-            - db:db
+            - db
         ports:
             - 8000:80
         environment:
