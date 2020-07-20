@@ -1,0 +1,8 @@
+version: "3"
+services:
+  webapp:
+    ports:
+      - 8001:80
+    build:
+     context: ./
+     dockerfile: Dockerfile

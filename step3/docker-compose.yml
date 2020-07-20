@@ -1,0 +1,19 @@
+version: "3"
+services:
+  webapp:
+    restart: always
+    ports:
+      - 8000:80
+    build:
+     context: ./
+     dockerfile: Dockerfile
+    container_name: webapp
+    volumes:
+        - db-data:/var/www/html
+    networks:
+        - net1
+
+volumes:
+  db-data:
+networks:
+  net1:
